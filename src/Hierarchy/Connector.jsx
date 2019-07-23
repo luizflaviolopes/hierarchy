@@ -40,12 +40,19 @@ export class Connector extends React.Component {
     let endRect = end.dom
     .getBoundingClientRect()
 
-    let positions = {
+    /*let positions = {
       x1: startRect.x + startRect.width/2,
       x2: endRect.x +endRect.width/2,
       y1: startRect.y,
       y2: endRect.y +(endRect.height),
-    }
+    }*/
+
+    let positions = {
+        x1: start.dom.offsetLeft + startRect.width/2,
+        x2: end.dom.offsetLeft +endRect.width/2,
+        y1: start.dom.offsetTop,
+        y2: end.dom.offsetTop +(endRect.height),
+      }
 
     let middle = (positions.y2- positions.y1)/2
 

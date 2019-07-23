@@ -36,8 +36,10 @@ export class HierarchyDraw extends React.Component {
       return (
     <Board>
         {this.state.dados.map(a=><Unity un={a} el={el}></Unity>)}
-        <svg style={{position:'absolute', top:0, left:0, zIndex:'-1', overflow:'visible'}} width={'100%'} height={'100%'} x="0" y="0" preserveAspectRatio="xMaxYMax meet">
+        <svg style={{position:'absolute', top:0, left:0, zIndex:'-1', overflow:'visible'}} width={'100%'} height={'100%'} >
+          <g>
           {this.state.connectors.map(c=><Connector start={c.start} end={c.end} color={lineColor}></Connector>)}
+          </g>
         </svg>
     </Board>
       )
