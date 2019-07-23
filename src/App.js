@@ -8,7 +8,7 @@ const dados = [{"nome":"Subsecretaria de Gestão e Apoio às Políticas Estraté
 
 const box = ({text,id}) => {return(
 <div style={{backgroundColor:'blue', width:'8rem', height:'5rem'}}>
-<label style={{position:'absolute', bottom:0}}>{text}</label>
+<label style={{}}>{text}</label>
 </div>)};
 
 
@@ -16,7 +16,10 @@ const box = ({text,id}) => {return(
 function App() {
   return (
     <div className="App">
-      <HierarchyDraw  data={dados} el={box}></HierarchyDraw>
+      <div>Menu</div>
+      <div style={{width:'50%', display:'inline-block'}}><HierarchyDraw  data={dados} el={box} lineColor={'red'}></HierarchyDraw></div>
+      
+      <div style={{width:'30%', display:'inline-block'}}></div>
     </div>
   );
 }
